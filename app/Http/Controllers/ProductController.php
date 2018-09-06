@@ -28,10 +28,15 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($selected_category = -1)
     {
         $categories = Category::all();
-        return view('pages.admin.product.create', compact('categories'));
+        if($selected_category != null)
+        {
+            $selectedCategory = $selected_category;
+        }
+        else $selectedCategory = 0;
+        return view('pages.admin.product.create', compact('categories', 'selectedCategory'));
     }
 
     /**
@@ -49,7 +54,7 @@ class ProductController extends Controller
             'category_id' => 'required|exists:categories,id',
         ]);
 
-        $obj = new Category();
+        $obj = new Product();
         $obj->name = $request->name;
         $obj->description = $request->description;
         $obj->category_id = $request->category_id;

@@ -21,7 +21,8 @@ Route::get('/', function (){
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'], function () {
     Route::get('/', 'PageController@adminDashboard')->name('admin.index');
-
+    Route::get('/products/{category_id}', 'CategoryController@getProductsByCategoryId')->name('admin.category.products');
+    Route::get('/products/{category_id}/create', 'ProductController@create')->name('admin.category.product_create');
     Route::resource('/category','CategoryController', ['as' => 'admin']);
     Route::resource('/product', 'ProductController', ['as' => 'admin']);
 });
