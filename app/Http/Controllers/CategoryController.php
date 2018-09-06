@@ -24,6 +24,12 @@ class CategoryController extends Controller
         return view('pages.admin.category.list')->with('list_obj', $list_obj);
     }
 
+    public function getProductsByCategoryId($category_id)
+    {
+        $category = Category::findOrFail($category_id);
+        return view('pages.admin.category.products')->with('category', $category);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
