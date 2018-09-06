@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 class CategoryController extends Controller
 {
     public function __construct() {
-        return $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -50,10 +50,10 @@ class CategoryController extends Controller
         ]);
 
         $obj = new Category();
-        $obj -> name = Input::get('name');
-        $obj -> type = Input::get('type');
+        $obj -> name = $request->name;
+        $obj -> type = $request->type;
         $obj -> save();
-        return redirect()->route('admin.product.index');
+        return redirect()->route('admin.category.index')->with('success', 'Đã tạo danh mục thành công');
     }
 
     /**
@@ -75,11 +75,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $obj = Category::find($id);
-        if($obj == null){
-            return view('404');
-        }
-        return view('admin.category.edit') -> with('obj', $obj);
+        $obj = Category::findOrFail($id);
+        return view('pages.admin.category.edit', compact('obj'));
     }
 
     /**
@@ -95,10 +92,10 @@ class CategoryController extends Controller
         if($obj == null){
             return view('404');
         }
-        $obj -> name = Input::get('name');
-        $obj -> type = Input::get('type');
+        $obj -> name = $request->name;
+        $obj -> type = $request->type;
         $obj -> save();
-        return redirect('/admin/category');
+        return redirect()->route('admin.category.index')->with('success','Cập nhật danh mục thành công');
     }
 
     /**

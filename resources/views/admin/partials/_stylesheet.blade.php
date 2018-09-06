@@ -8,4 +8,4 @@
 <!-- Styles -->
 <link href="{{ asset('mdb/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('mdb/css/mdb.min.css') }}" rel="stylesheet">
-<link href="{{ asset('style/main.css') }}" rel="stylesheet">
+{{-- <link href="{{ asset('style/main.css') }}" rel="stylesheet"> --}}

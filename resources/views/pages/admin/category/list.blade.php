@@ -9,7 +9,7 @@
         </div>
         <div class="card-body mx-4 mt-4">
             <div class="btn-group d-flex justify-content-end" role="group" aria-label="Các nút trang thể loại">
-                <a href="/admin/category/create" class="btn btn-indigo" role="button">Tạo mới</a>
+                <a href="{{route('admin.category.create')}}" class="btn btn-indigo" role="button">Tạo mới</a>
             </div>
             @if(count($list_obj) > 0)
                 <table id="dtMaterialDesignExample"
@@ -38,10 +38,10 @@
                             <td>{{$obj->type}}</td>
                             <td>{{$obj->created_at}}</td>
                             <td>
-                                <a href="/admin/category/{{$obj->id}}/edit" class="text-info"><i
+                            <a href="{{route('admin.category.edit',$obj->id)}}" class="text-info"><i
                                             class="fas fa-edit"></i></a>
                                 <a id="{{$obj->id}}"
-                                   href="#/admin/category/{{{$obj->id}}}  "
+                                   href="#{{route('admin.category.destroy',$obj->id)}}"
                                    class="btn-delete text-danger"><i
                                             class="fas fa-trash-alt"></i></a>
                             </td>
@@ -53,7 +53,7 @@
                     {{$list_obj->links()}}
                 </div>
             @else
-                <h1>Chưa có danh mục nào, vui lòng <a href="/admin/category/create">tạo mới</a>.</h1>
+            <h1>Chưa có danh mục nào, vui lòng <a href="{{route('admin.category.create')}}">tạo mới</a>.</h1>
             @endif
         </div>
     </div>

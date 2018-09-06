@@ -32,9 +32,10 @@
                             <i class="fa fa-angle-down rotate-icon"></i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="#" class="waves-effect">Danh mục sản phẩm </a>
+                                <li><a href="{{route('admin.category.index')}}" class="waves-effect">Danh mục sản phẩm
+                                    </a>
                                 </li>
-                                <li><a href="#" class="waves-effect">Sản phẩm</a>
+                                <li><a href="{{route('admin.product.index')}}" class="waves-effect">Sản phẩm</a>
                                 </li>
                                 <li><a href="#" class="waves-effect">Item</a>
                                 </li>
@@ -61,20 +62,28 @@
             <p>98 Media Viet Nam Admin</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
+            @guest
+            <li class="nav-item">
+                <a class="nav-link waves-effect" href="{{ route('login') }}">
+                    <i class="fas fa-sign-in-alt mr-1"></i>Đăng nhập
+                </a>
+            </li>
+            @else
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-user"></i> Account
+                    <i class="fa fa-user"></i> {{Auth::user()->username}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">Logout</a>
 
-                    <form action="#" id="logout-form" method="post" style="display:none;">
+                    <form id="logout-form" action="{{ route('logout') }}" method="post" style="display:none;">
                         @csrf
                     </form>
                 </div>
             </li>
+            @endguest
         </ul>
     </nav>
     <!-- /.Navbar -->
