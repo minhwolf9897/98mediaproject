@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Input;
 
 class CategoryController extends Controller
 {
+    public function __construct() {
+        return $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -13,10 +13,7 @@
 |
 */
 
-// Auth::routes();
-Route::get('admin', function() {
-    return view('pages.admin.dashboard');
-});
+Auth::routes();
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'], function () {
     Route::get('/', function() {
