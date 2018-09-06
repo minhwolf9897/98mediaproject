@@ -2,20 +2,19 @@
 
 @section('content')
     {{-- <a href="{{route('admin.genre.create')}}" class="btn btn-primary justify-content-end">Tạo mới</a> --}}
-    
     <div class="card">
         <div class="card-header unique-color-dark">
 
             {{-- <div class="row d-flex justify-content-center"> --}}
-            <h3 class="h3-reponsive white-text text-uppercase">Danh sách dịch vụ</h3>
+            <h3 class="h3-reponsive white-text text-uppercase">Danh sách dịch vụ theo danh mục '{{$category->name}}'</h3>
             {{-- </div> --}}
         </div>
         <div class="card-body mx-4 mt-4">
             <div class="btn-group d-flex justify-content-end" role="group" aria-label="Các nút trang thể loại">
-                <a href="{{route('admin.product.create')}}" class="btn btn-indigo" role="button"><i class="fas fa-plus-square mr-1"></i>Tạo mới</a>
+                <a href="{{route('admin.category.product_create',$category->id)}}" class="btn btn-indigo" role="button"><i class="fas fa-plus-square mr-1"></i>Tạo mới</a>
             </div>
 
-            @if(count($products) > 0)
+            @if(count($category->products) > 0)
                 <table id="dtMaterialDesignExample" class="table table-striped table-responsive-md table-sm table-editable" cellspacing="0" width="100%">
                     <thead>
                     <tr>
@@ -34,7 +33,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($category->products as $product)
                         <tr>
                             <td>{{$product->name}}</td>
                             <td>{{$product->description}}</td>

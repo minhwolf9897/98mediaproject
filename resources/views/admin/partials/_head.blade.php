@@ -37,8 +37,6 @@
                                 </li>
                                 <li><a href="{{route('admin.product.index')}}" class="waves-effect">Sản phẩm</a>
                                 </li>
-                                <li><a href="#" class="waves-effect">Item</a>
-                                </li>
                             </ul>
                         </div>
                     </li>

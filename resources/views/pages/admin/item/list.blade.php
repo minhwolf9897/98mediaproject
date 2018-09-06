@@ -2,7 +2,6 @@
 
 @section('content')
     {{-- <a href="{{route('admin.genre.create')}}" class="btn btn-primary justify-content-end">Tạo mới</a> --}}
-    
     <div class="card">
         <div class="card-header unique-color-dark">
 
