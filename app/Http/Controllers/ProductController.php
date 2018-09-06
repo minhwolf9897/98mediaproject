@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $limit = 10;
-        $list_obj = Category::paginate($limit);
-        return view('pages.admin.category.list')->with('list_obj', $list_obj);
+        //
     }
 
     /**
@@ -28,7 +24,6 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('pages.admin.category.create');
     }
 
     /**
@@ -40,16 +35,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $validatedData = $request->validate([
-            'name' => 'required|max:50',
-            'type' => 'required',
-        ]);
-
-        $obj = new Category();
-        $obj -> name = Input::get('name');
-        $obj -> type = Input::get('type');
-        $obj -> save();
-        return redirect()->route('admin.product.index');
     }
 
     /**
@@ -60,7 +45,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -71,11 +56,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $obj = Category::find($id);
-        if($obj == null){
-            return view('404');
-        }
-        return view('admin.category.edit') -> with('obj', $obj);
+        //
     }
 
     /**
@@ -87,14 +68,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $obj = Category::find($id);
-        if($obj == null){
-            return view('404');
-        }
-        $obj -> name = Input::get('name');
-        $obj -> type = Input::get('type');
-        $obj -> save();
-        return redirect('/admin/category');
+        //
     }
 
     /**
@@ -105,11 +79,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $obj = Category::find($id);
-        if($obj == null){
-            return response()->json(['error' => 'not found'], 404);
-        }
-        $obj->delete();
-        return response()->json(['message' => 'Deleted'], 200);
+        //
     }
 }
