@@ -13,15 +13,26 @@
 |
 */
 
-Route::resource('admin/category','CategoryController');
-Route::resource('admin/product', 'ProductController');
+// Auth::routes();
+Route::get('admin', function() {
+    return view('pages.admin.dashboard');
+});
+
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'], function () {
+    Route::get('/', function() {
+        return view('pages.admin.dashboard');
+    })->name('admin.index');
+
+    Route::resource('/category','CategoryController', ['as' => 'admin']);
+    Route::resource('/product', 'ProductController', ['as' => 'admin']);
+});
 
 //Route::resource('product','ProductController');
 
 //
-//Route::get('/', function (){
-//    return view('Client.form');
-//});
+Route::get('/', function (){
+   return view('pages.client.index');
+});
 //
 //Route::get('/photo', function (){
 //    return view('Client.photo');
@@ -38,7 +49,6 @@ Route::resource('admin/product', 'ProductController');
 //    return view('Admin.dashboard');
 //});
 
-//Auth::routes();
 
 //Route::group(['prefix'=>'admin', 'name'=>'admin'], function() {
 //    Route::resource('photo', 'PhotoController', ['as' => 'admin']);
