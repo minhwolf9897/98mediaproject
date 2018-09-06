@@ -8,7 +8,7 @@
                     </div>
                     <div class="card-body mx-4 mt-4">
                         <div class="btn-group d-flex justify-content-end" role="group" aria-label="Các nút trang thể loại">
-                            <a href="/admin/category" class="btn btn-indigo" role="button">Trở về danh sách</a>
+                        <a href="{{route('admin.category.index')}}" class="btn btn-indigo" role="button">Trở về danh sách</a>
                         </div>
                         @if ($errors->any())
                             <div class="alert alert-danger">
@@ -21,7 +21,7 @@
 
                             </div>
                         @endif
-                        <form action="/admin/category/{{$obj->id}}" method="POST">
+                        <form action="{{route('admin.category.update',$obj->id)}}" method="POST">
                             @method('PUT')
                             {{csrf_field()}}
                             <div class="form-group">

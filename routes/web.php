@@ -15,10 +15,12 @@
 
 Auth::routes();
 
+Route::get('/', function (){
+    return view('pages.client.index');
+ })->name('client.index');
+
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'], function () {
-    Route::get('/', function() {
-        return view('pages.admin.dashboard');
-    })->name('admin.index');
+    Route::get('/', 'PageController@adminDashboard')->name('admin.index');
 
     Route::resource('/category','CategoryController', ['as' => 'admin']);
     Route::resource('/product', 'ProductController', ['as' => 'admin']);
@@ -27,9 +29,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'],
 //Route::resource('product','ProductController');
 
 //
-Route::get('/', function (){
-   return view('pages.client.index');
-});
 //
 //Route::get('/photo', function (){
 //    return view('Client.photo');
