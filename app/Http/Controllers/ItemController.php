@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
 use App\Product;
+use App\Item;
 
-class ProductController extends Controller
+class ItemController extends Controller
 {
     public function __construct() {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,8 +20,8 @@ class ProductController extends Controller
     public function index()
     {
         $limit = 10;
-        $products = Product::paginate($limit);
-        return view('pages.admin.product.list', compact('products'));
+        $items = Item::paginate($limit);
+        return view('pages.admin.item.list', compact('items'));
     }
 
     /**
@@ -28,7 +29,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($selected_category = -1)
+    public function create()
     {
         $categories = Category::all();
         if($selected_category != null)
@@ -48,24 +49,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $validatedData = $request->validate([
-            'name' => 'required|max:50',
-            'description' => 'required|max:250|min:3',
-            'category_id' => 'required|exists:categories,id',
-        ]);
-
-        $obj = new Product();
-        $obj->name = $request->name;
-        $obj->description = $request->description;
-        $obj->category_id = $request->category_id;
-        $obj -> save();
-
-        $items = $request->item;
-        if($items != null) {
-
-            return view('pages.admin.product.test', compact('items'))->with('success','Thêm mới dịch vụ thành công');
-        }
-        return redirect()->route('admin.product.index')->with('success','Thêm mới dịch vụ thành công');
     }
 
     /**
@@ -87,9 +70,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $obj = Product::findOrFail($id);
-        $categories = Category::all();
-        return view('pages.admin.product.edit', compact('obj', 'categories'));
+        //
     }
 
     /**
@@ -101,13 +82,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $obj = Product::findOrFail($id);
-        $obj->name = $request->name;
-        $obj->description = $request->description;
-        $obj->category_id = $request->category_id;
-        $obj -> save();
-        return redirect()->route('admin.product.index')->with('success','Cập nhật dịch vụ thành công');
-   
+        //
     }
 
     /**
