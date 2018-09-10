@@ -50,4 +50,13 @@
             </form>
         </div>
     </div>
+    @foreach($obj->items as $item)
+
+        <figure class="col-md-4">
+            <a href="{{$item->link}}" data-size="1600x1067">
+                <img src="{{$item->link}}" alt="placeholder"
+                     class="img-fluid" />
+            </a>
+        </figure>
+    @endforeach
 @endsection

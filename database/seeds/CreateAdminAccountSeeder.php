@@ -14,6 +14,7 @@ class CreateAdminAccountSeeder extends Seeder
         DB::table('users')->insert([
           [
               'id'=>1,
+              'username'=>'admin',
               'name'=>'Admin',
               'email'=>'admin@98media.vn',
               'password'=>bcrypt('123456'),
