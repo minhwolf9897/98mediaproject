@@ -2,73 +2,155 @@
 
 @section('content')
 
-<section class="row no-gutters" id="features">
-    <div class="col-lg-3 col-md-6 col-sm-12 blue bg-blue lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".1s"><i class="fas fa-camera-retro 3x fa-3x"></i>
-            <div class="h5 mt-3"> Photography </div>
-            <p class="mt-5">Một sự lựa chọn tuyệt vời để lưu những khoảng khắc đẹp của chính bạn và người thân </p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 teal lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".3s"><i class="fas fa-video 5x fa-3x"></i>
-            <div class="h5 mt-3">Film Maker </div>
-            <p class="mt-5">Với ekip chuyên nghiệp có kinh nghiệm lâu năm trong lĩnh vực quay và dựng sẽ làm cho
-                quý khách hài lòng trên từng thước phim</p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 cyan lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".5s"><i class="fas fa-desktop fa-3x"></i>
-            <div class="h5 mt-3"> Graphic Design</div>
-            <p class="mt-5">Với đội ngũ designer giàu kinh nghiệm , năng động và tâm huyết với từng sản phẩm , Quý
-                khách hàng hoàn toàn có thể yên tâm cùng 98Media !</p>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 light-blue lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".7s"><i class="far fa-edit fa-3x"></i>
-            <div class="h5 mt-3">Video Edit</div>
-            <p class="mt-5">Video Editer hàng đầu tại Hà Nội đảm trách , cam kết khách hàng không ưng không lấy
-                tiền ! </p>
-        </div>
-    </div>
-</section>
-<section class="text-center py-5 grey lighten-4" id="about">
-    <div class="container">
-        <div class="wow fadeIn">
-            <h2 class="h1 pt-5 pb-3">Về 98 Media Team</h2>
-            <p class="px-5 mb-5 pb-3 lead blue-grey-text">
-                Chuyên nghiệp =)))
+<section class="row no-gutters mt-3">
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-            </p>
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="http://c1.staticflickr.com/2/1846/44517946522_4e20010672_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Chụp ảnh cưới đẹp với 98 MEDIA </h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/photo">Ảnh cưới đẹp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://c1.staticflickr.com/2/1736/42460555722_1a4ea78d74_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Chụp ảnh kỉ yếu đẹp với 98 MEDIA</h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/photo">Ảnh kỉ yếu đẹp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://c1.staticflickr.com/2/1744/41789712164_7edc6f63f2_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Ảnh Thời Trang theo xu hướng hot nhất </h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/photo">Ảnh thời trang Hot</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.First slide-->
+
+            <!--Second slide-->
+            <div class="carousel-item">
+
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://c1.staticflickr.com/2/1725/27641744967_39117bb7bb_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Quay MV cưới với 98 Media</h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/video">Quay Video cưới đẹp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://c1.staticflickr.com/1/801/40429997435_d019bd08f0_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Quay MV ngắn </h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/video">MV Ngắn Đặc Sắc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://c1.staticflickr.com/1/902/39516528610_85ff1c3435_b.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Quay video viral cùng 98 MEDIA </h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="/video">Video Viral </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.Second slide-->
+
+            <!--Third slide-->
+            <div class="carousel-item">
+
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Design ấn phẩm theo ý tưởng của bạn </h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary">Design ấn phẩm đẹp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Design Logo & Bộ nhận diện thương hiệu</h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary">Design Logo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Design áo team áo lớp</h4>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary">Design áo team</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.Third slide-->
+
         </div>
-        <div class="row">
-            <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".3s"><i class="fas fa-tachometer-alt fa-3x orange-text"></i>
-                <h3 class="h4 mt-3">Đa dạng về lựa chọn </h3>
-                <p class="mt-3 blue-grey-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                    minima assumenda deleniti
-                    hic.
-                </p>
-            </div>
-            <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".4s"><i class="fas fa-star fa-3x cyan-text"></i>
-                <h3 class="h4 mt-3">Được đánh giá rất cao </h3>
-                <p class="mt-3 blue-grey-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                    minima assumenda deleniti
-                    hic.
-                </p>
-            </div>
-            <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-cubes fa-3x red-text"></i>
-                <h3 class="h4 mt-3">Rút ngắn thời gian của khách hàng </h3>
-                <p class="mt-3 blue-grey-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam
-                    minima assumenda deleniti
-                    hic.
-                </p>
-            </div>
-        </div>
+        <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Slides-->
+
     </div>
+    <!--/.Carousel Wrapper-->
 </section>
-<section class="text-center py-5 indigo darken-1 text-white" id="pricing">
+<section class="text-center py-5 teal darken-1 text-white" id="pricing">
     <div class="container">
         <div class="wow fadeIn">
             <h2 class="h1 pt-5 pb-3">Dịch Vụ</h2>

@@ -43,6 +43,15 @@
                         <label class="text-danger">*{{$errors->first('description')}}</label>
                     @endif
                 </div>
+                <div class="form-group">
+                    <label>Đăng Item</label>
+                    <div class="row ml-1" id="dynamic_field">
+                        <div>
+                            <input type="text" name="item[]" id="item" placeholder="Điền link ảnh" class="form-control name_list w-50 mr-2">
+                            <a name="add" id="add" class="btn btn-sm btn-success">Thêm</a>
+                        </div>
+                    </div>
+                </div>
                 <div>
                     <input type="submit" value="Lưu thông tin" class="btn btn-primary">
                     <input type="reset" value="Làm lại" class="btn btn-dark">
@@ -59,4 +68,23 @@
             </a>
         </figure>
     @endforeach
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            var i = 1;
+            $('#add').click(function () {
+                i++;
+                $('#dynamic_field').append(
+                    '<div id="row'+i+'"><input type="text" name="item[]" id="item" placeholder="Điền link ảnh" class="form-control name_list w-50 mr-2"><a name="remove" id="'+i+'" class="btn btn-sm btn-danger btn_remove">Xóa</a></div>'
+                );
+            });
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $("#row"+button_id+"").remove();
+            });
+
+        });
+    </script>
 @endsection

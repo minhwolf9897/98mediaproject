@@ -4,7 +4,7 @@
 }
 
 .top-nav-collapse {
-  background-color: #acefec !important;
+  background-color: #3d6aff !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -55,4 +55,8 @@
 }
 #barphoto{
   background-color: #42a5f5;
+}
+
+.body {
+  font-family: 'Quicksand', sans-serif; !important;
 }

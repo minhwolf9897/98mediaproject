@@ -18,6 +18,15 @@ class ItemSeeder extends Seeder
                 [
                     'id' => 1,
                     'link' => 'https://c1.staticflickr.com/1/864/39597154120_212fe06071_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1881/43657949135_571bc70439_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1855/29629401037_3f60e5799e_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1898/44517932902_94a5d9e355_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1849/42758126910_7e07e733aa_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1846/44517946522_02b24d8030_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1873/42758133470_c821f5d337_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1850/42758155770_fc6ee0c8fc_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1872/30697157438_a851420e67_k.jpg',
+                    'link' => 'https://c1.staticflickr.com/2/1878/42758160230_1507e9fe79_k.jpg',
                     'product_id' => 1,
                     'created_at' => now()->format('Y-m-d H:i:s'),
                     'updated_at' => now()->format('Y-m-d H:i:s')

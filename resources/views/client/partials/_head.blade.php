@@ -7,32 +7,33 @@
             <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav ml-auto" style="font-family: 'Roboto', sans-serif">
                     <li class="nav-item"><a class="nav-link active" href="#about">Về Chúng Tôi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Chụp ảnh</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Quay Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/photo">Chụp ảnh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/video">Quay Video</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Đội ngũ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="view hm-gradient" id="intro">
-        <div class="full-bg-img d-flex align-items-center">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-10 col-lg-6 text-center text-md-left margins">
-                        <div class="white-text">
-                            <div class="wow fadeInLeft" data-wow-delay="0.3s">
-                                <h1 class="h1-responsive font-bold mt-sm-5">Lưu giữ từng khoảng khắc tuyệt vời nhất </h1>
-                                <div class="h6">
-                                    98Media Viet Nam là một sự lựa chọn tuyệt vời đối với mọi nhu cầu của quý khách hàng , Chúng tôi vì bạn !
-                                </div>
-                            </div><br>
-                            <div class="wow fadeInLeft" data-wow-delay="0.3s"><a class="btn btn-white dark-grey-text font-bold ml-0" href="https://www.youtube.com/watch?v=bBJYAJJkGJk" target="_blank"><i class="fa fa-play mr-1"></i> 98 MEDIA VIET NAM CHANNEL</a>
-                        </div>
-                    </div>
-                </div>
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1850/42758155770_fc6ee0c8fc_k.jpg" width="900" height="700" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/1/820/26454272057_000f804dbc_k.jpg"  width="900" height="700" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1849/42758126910_7e07e733aa_k.jpg"  width="900" height="700" alt="Third slide">
             </div>
         </div>
-        </div>
-    </section>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </header>

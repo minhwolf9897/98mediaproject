@@ -31,9 +31,12 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'name' => 'admin'],
 
 //
 //
-//Route::get('/photo', function (){
-//    return view('Client.photo');
-//});
+Route::get('/photo', function (){
+    return view('pages.client.photo');
+});
+Route::get('/video', function (){
+    return view('pages.client.video');
+});
 //
 //Route::get('/video', function (){
 //    return view('Client.video');

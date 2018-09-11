@@ -41,9 +41,10 @@
                             <td>{{$product->created_at}}</td>
                             <td>
 
-                                <a href="" class="text-info"><i class="fas fa-trash-alt"></i></a>
-                                <a href="{{route('admin.product.edit',$product->id)}}" class="text-danger"><i class="fas fa-edit"></i></a>
 
+                                <a href="{{route('admin.product.edit',$product->id)}}" class="text-danger"><i class="fas fa-edit"></i></a>
+                                <a id="{{$product->id}}" href="#{{route('admin.product.destroy',$product->id)}}" class="btn-delete"><i
+                                            class="fas fa-trash-alt"></i></a>
                             </td>
                         </tr>
                     @endforeach
@@ -70,4 +71,26 @@
             @endif
         </div>
     </div>
+    <script>
+        $(".btn-delete").click(function () {
+            var Id = $(this).attr('id').replace('btn-delete ', '');
+            var confirms = confirm('Ơ xóa thật à ?');
+            if (confirms) {
+                $.ajax({
+                    url: 'http://127.0.0.1:8000/admin/product/ ' + Id,
+                    method: 'DELETE',
+                    data: {
+                        '_token': "{{csrf_token()}}",
+                    },
+                    success: function (response) {
+                        alert('Deleted !');
+                        window.location.reload();
+                    },
+                    error: function () {
+                        alert('some thing wrong!?');
+                    }
+                });
+            }
+        });
+    </script>
 @endsection

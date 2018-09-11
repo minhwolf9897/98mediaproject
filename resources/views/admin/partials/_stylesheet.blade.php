@@ -8,4 +8,5 @@
 <!-- Styles -->
 <link href="{{ asset('mdb/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('mdb/css/mdb.min.css') }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=vietnamese" rel="stylesheet">
 {{-- <link href="{{ asset('style/main.css') }}" rel="stylesheet"> --}}
