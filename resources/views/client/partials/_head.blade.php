@@ -9,7 +9,7 @@
                     <li class="nav-item"><a class="nav-link active" href="#about">Về Chúng Tôi</a></li>
                     <li class="nav-item"><a class="nav-link" href="/photo">Chụp ảnh</a></li>
                     <li class="nav-item"><a class="nav-link" href="/video">Quay Video</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Đội ngũ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/design">Design</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
                 </ul>
             </div>

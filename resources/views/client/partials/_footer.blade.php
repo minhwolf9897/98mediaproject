@@ -1,4 +1,4 @@
-<footer class=" text-center page-footer indigo darken-2 center-on-small-only pt-0 mt-0">
+<footer class=" text-center page-footer light-blue darken-1 center-on-small-only pt-0 mt-0">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright light-blue darken-1">
         <div class="container-fluid">
             <p>&copy; <a href="/">98 MEDIA VIET NAM</a></p>
         </div>

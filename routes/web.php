@@ -37,6 +37,9 @@ Route::get('/photo', function (){
 Route::get('/video', function (){
     return view('pages.client.video');
 });
+Route::get('/design', function (){
+    return view('pages.client.design    ');
+});
 //
 //Route::get('/video', function (){
 //    return view('Client.video');

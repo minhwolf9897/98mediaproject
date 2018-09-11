@@ -1,7 +1,7 @@
 @extends('client.master')
 
 @section('content')
-    <section>
+    <section class="mt-5">
     <h1 class="text-center teal-text wow fadeInUp" data-wow-delays="0.3s">ALBUM ẢNH CƯỚI ĐẸP</h1>
         <div class="row">
             <div class="col-md-12">
