@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>98 FILM MAKER</title>
+    <title>98 DESIGN STUDIO</title>
     <script src="{{ asset('mdb/js/jquery-3.3.1.min.js') }}"></script>
     <!-- Scripts -->
     <script src="{{ asset('mdb/js/jquery-3.3.1.min.js') }}"></script>
@@ -59,24 +59,24 @@
                 <img class="d-block w-100" src="{{asset('img/marvin-meyer-571072-unsplash (1).jpg')}}"  width="900" height="700"
                      alt="First slide">
                 <div class="carousel-caption">
-                    <h3 class="h3-responsive">Slight mask</h3>
-                    <p>Third text</p>
+                    <h3 class="h3-responsive teal-text">Quan điểm của chúng tôi về design</h3>
+                    <p class="black-text">Thực sự, niềm tự hào của tôi về những thứ chúng tôi chưa làm được ngang với những gì đã làm được. Đổi mới là phải nói 'không' với nghìn thứ.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="{{asset('img/Design (1).jpg')}}"  width="900" height="700"
                      alt="Second slide">
                 <div class="carousel-caption carousel-fade">
-                    <h3 class="h3-responsive">Slight mask</h3>
-                    <p>Third text</p>
+                    <h3 class="h3-responsive teal-text">Ý tưởng </h3>
+                    <p>Lập luận có thể dẫn bạn từ A đến B. Trí tưởng tượng sẽ dẫn bạn đi khắp mọi nơi...</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="{{asset('img/design 1.jpg')}}"  width="900" height="700"
                      alt="Third slide">
                 <div class="carousel-caption">
-                    <h3 class="h3-responsive">Slight mask</h3>
-                    <p>Third text</p>
+                    <h3 class="h3-responsive teal-text">Chúng tôi đặt chất lượng lên hàng đầu</h3>
+                    <p>Chất lượng quan trọng hơn số lượng. Một 'home run' hơn nhiều so với hai 'double'.</p>
                 </div>
             </div>
         </div>
