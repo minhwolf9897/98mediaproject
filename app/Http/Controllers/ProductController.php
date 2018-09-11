@@ -58,18 +58,28 @@ class ProductController extends Controller
         $obj->category_id = $request->category_id;
         $obj->save();
 
-        $item_urls = $request->item_urls;
-        $item_urls_array = explode("@img@", $item_urls);
-        $arrayItem = array();
-        foreach ($item_urls_array as $link) {
-            if(strlen($link)>0){
-                $item = array();
-                $item['link'] = $link;
-                $item['product_id'] = $obj->id;
-                array_push($arrayItem, $item);
+        if($obj->category->type != 2)
+        {
+
+            $item_urls = $request->item_urls;
+            $item_urls_array = explode("@img@", $item_urls);
+            $arrayItem = array();
+            foreach ($item_urls_array as $link) {
+                if(strlen($link)>0){
+                    $item = array();
+                    $item['link'] = $link;
+                    $item['product_id'] = $obj->id;
+                    array_push($arrayItem, $item);
+                }
             }
+            Item::insert($arrayItem); // check so luong phan tu truowc khi save.
         }
-        Item::insert($arrayItem); // check so luong phan tu truowc khi save.
+        else {
+            $item = new Item;
+            $item->product_id = $obj->id;
+            $item->link = $request->item;
+            $item->save();
+        }
         return redirect()->route('admin.product.index')->with('success', 'Thêm mới dịch vụ thành công');
     }
 
@@ -117,16 +127,10 @@ class ProductController extends Controller
         $obj->description = $request->description;
         $obj->category_id = $request->category_id;
         $obj->save();
-        $items = $request->item;
-        if ($items != null) {
-            $request->merge([
-                'item' => json_encode($request->get('item'))
-            ]);
-            $items = $obj->items()->save(new Item($request->get('item')));
-//            Item::insert($items);
-            return view('pages.admin.product.test', compact('items'))->with('success', 'Thêm mới dịch vụ thành công');
-        }
-        return redirect()->route('admin.product.index')->with('success', 'Thêm mới dịch vụ thành công');
+        $item = $request->item;
+
+
+        return redirect()->route('admin.product.index')->with('success', 'Lưu dịch vụ thành công');
 
     }
 

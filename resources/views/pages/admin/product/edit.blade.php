@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <video class="video-fluid" style="max-width:480px;">
-                    <source src="{{$item->link}}" type="video/mp4" />
+                    <source src="{{$obj->items->first()->link}}" type="video/mp4" />
                 </video>
                 <label>Sửa link video</label>
                 <div class="row ml-1">
