@@ -96,9 +96,8 @@
             @foreach($category->products as $product)
             @foreach($product->items as $item)
             <div class="col-lg-4 col-sm-6">
-                <video class="video-fluid">
-                    <source src="{{$item->link}}" type="video/mp4" />
-                </video>
+                <iframe class="video-fluid" width="420" height="315" src="{{$item->link}}">
+                </iframe>
             </div>
             @endforeach
             @endforeach
