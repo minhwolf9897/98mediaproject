@@ -128,18 +128,37 @@ class ProductController extends Controller
         $obj->category_id = $request->category_id;
         $obj->save();
 
-        if($obj->items->first() != null)
+
+        if($obj->category->type != 2)
         {
-            $item = $obj->items->first();
-            $item->product_id = $obj->id;
-            $item->link = $request->item;
-            $item->save();
+
+            $item_urls = $request->item_urls;
+            $item_urls_array = explode("@img@", $item_urls);
+            $arrayItem = array();
+            foreach ($item_urls_array as $link) {
+                if(strlen($link)>0){
+                    $item = array();
+                    $item['link'] = $link;
+                    $item['product_id'] = $obj->id;
+                    array_push($arrayItem, $item);
+                }
+            }
+            Item::insert($arrayItem); // check so luong phan tu truowc khi save.
         }
         else {
-            $item = new Item;
-            $item->product_id = $obj->id;
-            $item->link = $request->item;
-            $item->save();
+            if($obj->items->first() != null)
+            {
+                $item = $obj->items->first();
+                $item->product_id = $obj->id;
+                $item->link = $request->item;
+                $item->save();
+            }
+            else {
+                $item = new Item;
+                $item->product_id = $obj->id;
+                $item->link = $request->item;
+                $item->save();
+            }
         }
 
         return redirect()->route('admin.product.index')->with('success', 'Lưu dịch vụ thành công');
