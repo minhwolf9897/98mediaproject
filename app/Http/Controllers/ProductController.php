@@ -45,7 +45,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $validatedData = $request->validate([
             'name' => 'required|max:50',
             'description' => 'required|max:250|min:3',
@@ -58,11 +58,18 @@ class ProductController extends Controller
         $obj->category_id = $request->category_id;
         $obj->save();
 
-        $items = $request->item;
-        if ($items != null) {
-//            Item::insert($items);
-            return view('pages.admin.product.test', compact('items'))->with('success', 'Thêm mới dịch vụ thành công');
+        $item_urls = $request->item_urls;
+        $item_urls_array = explode("@img@", $item_urls);
+        $arrayItem = array();
+        foreach ($item_urls_array as $link) {
+            if(strlen($link)>0){
+                $item = array();
+                $item['link'] = $link;
+                $item['product_id'] = $obj->id;
+                array_push($arrayItem, $item);
+            }
         }
+        Item::insert($arrayItem); // check so luong phan tu truowc khi save.
         return redirect()->route('admin.product.index')->with('success', 'Thêm mới dịch vụ thành công');
     }
 

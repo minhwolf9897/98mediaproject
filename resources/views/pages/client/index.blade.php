@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="row no-gutters mt-3">
+<section class="row no-gutters mt-5 ">
     <!--Carousel Wrapper-->
     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -150,7 +150,7 @@
     </div>
     <!--/.Carousel Wrapper-->
 </section>
-<section class="text-center py-5 teal darken-1 text-white" id="pricing">
+<section class="text-center py-5 light-blue lighten-5 " id="pricing">
     <div class="container">
         <div class="wow fadeIn">
             <h2 class="h1 pt-5 pb-3">Dịch Vụ</h2>
@@ -161,7 +161,7 @@
         <div class="row wow zoomIn">
             <div class="col-lg-4 col-md-12 mb-r">
                 <div class="card card-image">
-                    <div class="text-white text-center pricing-card d-flex align-items-center rgba-stylish-strong py-3 px-3 rounded">
+                    <div class=" text-center pricing-card d-flex align-items-center rgba-stylish-strong py-3 px-3 rounded">
                         <div class="card-body">
                             <div class="h5">Chụp ảnh</div>
                             <div class="py-5"><sup class="display-4"><i class="fas fa-camera"></i></sup></div>
@@ -185,7 +185,7 @@
             </div>
             <div class="col-lg-4 col-md-12 mb-r">
                 <div class="card card-image">
-                    <div class="text-white text-center pricing-card d-flex align-items-center rgba-teal-strong py-3 px-3 rounded">
+                    <div class=" text-center pricing-card d-flex align-items-center rgba-teal-strong py-3 px-3 rounded">
                         <div class="card-body">
                             <div class="h5">Quay phim ngắn</div>
                             <div class="py-5"><sup class="display-4"><i class="fas fa-video"></i></sup></div>
@@ -210,7 +210,7 @@
             </div>
             <div class="col-lg-4 col-md-12 mb-r">
                 <div class="card card-image">
-                    <div class="text-white text-center pricing-card d-flex align-items-center rgba-red-strong py-3 px-3 rounded">
+                    <div class="text-center pricing-card d-flex align-items-center rgba-red-strong py-3 px-3 rounded">
                         <div class="card-body">
                             <div class="h5">Thiết kế ấn phẩm</div>
                             <div class="py-5"><sup class="display-4"><i class="fas fa-desktop"></i></sup></div>
@@ -236,14 +236,12 @@
         </div>
     </div>
 </section>
-<section class="py-5" id="team">
+<section class="py-5 light-blue lighten-5" id="team" >
     <div class="container">
         <div class="wow fadeIn">
             <h2 class="h1 pt-5 pb-3 text-center">Thành viên 98 Media Viet Nam</h2>
-            <p class="px-5 mb-5 pb-3 lead text-center blue-grey-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident
-                voluptate
-                esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.
+            <p class="px-5 mb-5 pb-3 lead text-centen">
+
             </p>
         </div>
         <div class="row mb-lg-4 center-on-small-only">
@@ -292,7 +290,7 @@
         </div>
     </div>
 </section>
-<section id="contact" style="background-image:url('img/panorama-3094696_1920.jpg');">
+<section id="contact" style="background-image:url('{{asset('img/IMG_7992.jpg')}}');">
     <div class="rgba-black-strong py-5">
         <div class="container">
             <div class="wow fadeIn">
@@ -347,7 +345,7 @@
                         <div class="col-md-4">
                             <ul class="list-unstyled text-center">
                                 <li class="mt-4"><i class="fa fa-map-marker indigo-text fa-2x"></i>
-                                    <p class="mt-2">98MEDIA CENTER , 98 My Dinh Street , Nam Tu Liem Ditric , Ha
+                                    <p class="mt-2">98MEDIA CENTER , 98 My Dinh Street , Nam Tu Liem district , Ha
                                         Noi City</p>
                                 </li>
                                 <li class="mt-4"><i class="fa fa-phone indigo-text fa-2x"></i>
