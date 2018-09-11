@@ -46,9 +46,8 @@
             <div class="form-group">
                 @if(count($obj->items) > 0)
                 
-                <video class="video-fluid" style="max-width:480px;">
-                    <source src="{{$obj->items->first()->link}}" type="video/mp4" />
-                </video>
+                <iframe class="video-fluid" width="420" height="315" src="{{$item->link}}">
+                    </iframe>
                 @else 
                     Chưa có video nào
                 @endif
