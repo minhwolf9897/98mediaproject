@@ -46,7 +46,7 @@
             <div class="form-group">
                 @if(count($obj->items) > 0)
                 
-                <iframe class="video-fluid" width="420" height="315" src="{{$item->link}}">
+                <iframe class="video-fluid" width="420" height="315" src="{{$obj->items->first()->link}}">
                     </iframe>
                 @else 
                     Chưa có video nào
