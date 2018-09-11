@@ -45,16 +45,17 @@
             </div>
             <div class="form-group">
                 <label>Danh sách item</label>
-                <div>
+                
                     @if(count($obj->items) > 0)
+                    <div style="display:none;">
                     @foreach($obj->items as $item)
                     <img src="{{$item->link}}" class="img-fluid item-exists" style="max-width: 150px;">
                     @endforeach
-
+                    </div>
                     @else
                     Không có item nào có sẵn
                     @endif
-                </div>
+          
 
 
 
