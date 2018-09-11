@@ -127,8 +127,20 @@ class ProductController extends Controller
         $obj->description = $request->description;
         $obj->category_id = $request->category_id;
         $obj->save();
-        $item = $request->item;
 
+        if($obj->items->first() != null)
+        {
+            $item = $obj->items->first();
+            $item->product_id = $obj->id;
+            $item->link = $request->item;
+            $item->save();
+        }
+        else {
+            $item = new Item;
+            $item->product_id = $obj->id;
+            $item->link = $request->item;
+            $item->save();
+        }
 
         return redirect()->route('admin.product.index')->with('success', 'Lưu dịch vụ thành công');
 
