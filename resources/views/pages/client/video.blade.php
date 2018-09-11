@@ -92,11 +92,11 @@
 
     <div class="list-video">
         <div class="row">
-            @foreach($categories->whereIn('type',[2, 3]) as $category)
+            @foreach($categories as $category)
             @foreach($category->products as $product)
             @foreach($product->items as $item)
             <div class="col-lg-4 col-sm-6">
-                <video class="video-fluid" autoplay loop muted>
+                <video class="video-fluid">
                     <source src="{{$item->link}}" type="video/mp4" />
                 </video>
             </div>

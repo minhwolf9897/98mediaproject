@@ -94,7 +94,13 @@ class ProductController extends Controller
     {
         $obj = Product::findOrFail($id);
         $categories = Category::all();
-        return view('pages.admin.product.edit', compact('obj', 'categories'));
+        if($obj->category->type == 2)
+        {
+            return view('pages.admin.product.edit', compact('obj', 'categories'));
+        }
+        else {
+            return view('pages.admin.product.editv2', compact('obj', 'categories'));
+        }
     }
 
     /**
