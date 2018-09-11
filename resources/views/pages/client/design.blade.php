@@ -109,50 +109,15 @@
                 <div class="card-body p-5">
                     <div class="row">
                         <div class="col-md-8">
-                            <form action="https://formspree.io/youremail@example.com" method="POST">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input class="form-control" id="name" type="text" name="name"
-                                                   required="required"/>
-                                            <label for="name">Tên của bạn</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input class="form-control" id="message" type="text" name="_replyto"
-                                                   required="required"/>
-                                            <label for="email">Số điện thoại liên hệ</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="md-form">
-                                            <input class="form-control" id="subject" type="text" name="subject"
-                                                   required="required"/>
-                                            <label for="subject">Loại dịch vụ đang quan tâm</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="md-form">
-                                            <textarea class="md-textarea" id="message" name="message"
-                                                      required="required"></textarea>
-                                            <label for="message">Lời nhắn với chúng tui</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="center-on-small-only mb-4">
-                                    <button class="btn btn-indigo ml-0" type="submit"><i
-                                                class="fa fa-paper-plane-o mr-2"></i>
-                                        Send
-                                    </button>
-                                </div>
-                            </form>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnq7cS_qd6rfW-87ZL-wcQ1-mpNzl9tlNaJXOncakhEKajHg/viewform?embedded=true" width="640" height="996" frameborder="0" marginheight="0" marginwidth="0">Đang tải...</iframe>
                         </div>
                         <div class="col-md-4">
                             <ul class="list-unstyled text-center">
-                                <li class="mt-4"><i class="fa fa-map-marker indigo-text fa-2x"></i>
+                                <li class="mt-4"><a href="https://www.facebook.com/98media.vn" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                                <p class="mt-2">Kết nối với chung tôi trên facebook</p> </li>
+                                <li class="mt-4"><a href="https://www.instagram.com/98media_vietnam/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                                    <p class="mt-2">Kết nối với chúng tôi trên intagram</p> </li>
+                                <li class="mt-4"><a href="https://goo.gl/maps/qdnX1XrPRa52" target="_blank"> <i class="fa fa-map-marker indigo-text fa-2x"></i></a>
                                     <p class="mt-2">98MEDIA CENTER , 98 My Dinh Street , Nam Tu Liem Ditric , Ha
                                         Noi City</p>
                                 </li>
