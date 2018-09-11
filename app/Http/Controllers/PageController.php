@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class PageController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['indexHome']]);
     }
 
     public function adminDashboard() {
@@ -17,5 +18,11 @@ class PageController extends Controller
             return redirect()->route('client.index')->with('error','Tài khoản của bạn chưa được kích hoạt, hãy chờ BQT');
         }
         return view('pages.admin.dashboard');
+    }
+
+    public function indexPhoto() {
+        $products = Product::all();
+
+        return view('pages.client.photo', compact('products'));
     }
 }
