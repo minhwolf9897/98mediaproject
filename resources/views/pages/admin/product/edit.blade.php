@@ -44,9 +44,14 @@
                 @endif
             </div>
             <div class="form-group">
+                @if(count($obj->items) > 0)
+                
                 <video class="video-fluid" style="max-width:480px;">
                     <source src="{{$obj->items->first()->link}}" type="video/mp4" />
                 </video>
+                @else 
+                    Chưa có video nào
+                @endif
                 <label>Sửa link video</label>
                 <div class="row ml-1">
                     <div>
@@ -72,22 +77,5 @@
 @endsection
 
 @section('scripts')
-<script>
-    $(document).ready(function () {
-        var i = 1;
-        $('#add').click(function () {
-            i++;
-            $('#dynamic_field').append(
-                '<div id="row' + i +
-                '"><input type="text" name="item[]" id="item" placeholder="Điền link ảnh" class="form-control name_list w-50 mr-2"><a name="remove" id="' +
-                i + '" class="btn btn-sm btn-danger btn_remove">Xóa</a></div>'
-            );
-        });
-        $(document).on('click', '.btn_remove', function () {
-            var button_id = $(this).attr("id");
-            $("#row" + button_id + "").remove();
-        });
 
-    });
-</script>
 @endsection
