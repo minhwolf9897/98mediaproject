@@ -29,7 +29,7 @@ class PageController extends Controller
     }
 
     public function indexVideo() {
-        $categories = Category::all();
+        $categories = Category::where('type', 2)->get();
 
         return view('pages.client.video', compact('categories'));
     }
