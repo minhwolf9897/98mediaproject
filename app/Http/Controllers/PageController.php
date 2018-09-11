@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Item;
+use App\Category;
 
 class PageController extends Controller
 {
@@ -24,5 +26,11 @@ class PageController extends Controller
         $products = Product::all();
 
         return view('pages.client.photo', compact('products'));
+    }
+
+    public function indexVideo() {
+        $categories = Category::all();
+
+        return view('pages.client.video', compact('categories'));
     }
 }
