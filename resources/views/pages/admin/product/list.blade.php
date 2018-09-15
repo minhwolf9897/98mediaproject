@@ -66,6 +66,7 @@
                     </tr>
                     </tfoot> --}}
                 </table>
+                {{$products->links()}}
             @else
                 <h1>Chưa có thể loại nào</h1>
             @endif

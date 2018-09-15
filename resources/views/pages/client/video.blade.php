@@ -39,7 +39,6 @@
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto" style="font-family: 'Roboto', sans-serif">
-                        <li class="nav-item"><a class="nav-link active" href="#about">Về Chúng Tôi</a></li>
                         <li class="nav-item"><a class="nav-link" href="/photo">Chụp ảnh</a></li>
                         <li class="nav-item"><a class="nav-link" href="/video">Quay Video</a></li>
                         <li class="nav-item"><a class="nav-link" href="/design">Design ấn phẩm</a></li>
@@ -91,12 +90,13 @@
     </header>
 
     <div class="list-video">
+        <div class="container">
         <div class="row">
             @foreach($categories as $category)
             @foreach($category->products as $product)
             @foreach($product->items as $item)
-            <div class="col-lg-4 col-sm-6">
-                <iframe class="video-fluid" width="420" height="315" src="{{$item->link}}">
+            <div class="col-6">
+                <iframe width="560" height="316" src="{{$item->link}}">
                 </iframe>
             </div>
             @endforeach
@@ -104,6 +104,7 @@
             @endforeach
 
         </div>
+    </div>
     </div>
 
 
@@ -137,6 +138,8 @@
                                                 class="fab fa-instagram fa-2x"></i></a>
                                         <p class="mt-2">Kết nối với chúng tôi trên intagram</p>
                                     </li>
+                                    <li class="mt-4"><a href="https://www.youtube.com/channel/UCIdYAQShWmQwkLUfT6MarZQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                                        <p class="mt-2">Channel 98 MEDIA VIET NAM</p> </li>
                                     <li class="mt-4"><a href="https://goo.gl/maps/qdnX1XrPRa52" target="_blank"> <i
                                                 class="fa fa-map-marker indigo-text fa-2x"></i></a>
                                         <p class="mt-2">98MEDIA CENTER , 98 My Dinh Street , Nam Tu Liem Ditric , Ha

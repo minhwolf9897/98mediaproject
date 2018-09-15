@@ -60,25 +60,28 @@ class ProductController extends Controller
 
         if($obj->category->type != 2)
         {
-
-            $item_urls = $request->item_urls;
-            $item_urls_array = explode("@img@", $item_urls);
-            $arrayItem = array();
-            foreach ($item_urls_array as $link) {
-                if(strlen($link)>0){
-                    $item = array();
-                    $item['link'] = $link;
-                    $item['product_id'] = $obj->id;
-                    array_push($arrayItem, $item);
+            if($request->item_urls != null) {
+                $item_urls = $request->item_urls;
+                $item_urls_array = explode("@img@", $item_urls);
+                $arrayItem = array();
+                foreach ($item_urls_array as $link) {
+                    if (strlen($link) > 0) {
+                        $item = array();
+                        $item['link'] = $link;
+                        $item['product_id'] = $obj->id;
+                        array_push($arrayItem, $item);
+                    }
                 }
+                Item::insert($arrayItem); // check so luong phan tu truowc khi save.
             }
-            Item::insert($arrayItem); // check so luong phan tu truowc khi save.
         }
         else {
-            $item = new Item;
-            $item->product_id = $obj->id;
-            $item->link = $request->item;
-            $item->save();
+            if($request->item != null) {
+                $item = new Item;
+                $item->product_id = $obj->id;
+                $item->link = $request->item;
+                $item->save();
+            }
         }
         return redirect()->route('admin.product.index')->with('success', 'Thêm mới dịch vụ thành công');
     }

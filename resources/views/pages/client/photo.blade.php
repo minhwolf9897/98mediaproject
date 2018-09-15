@@ -12,8 +12,8 @@
                 @foreach($products->where('category_id', 1) as $product)
                 @foreach($product->items as $item)
                 <figure class="col-md-4">
-                    <a href="{{$item->link}}" data-size="1600x1067">
-                        <img src="{{$item->link}}" alt="placeholder" class="img-fluid">
+                    <a href="{{str_replace('w_150', 'w_1500', $item->link)}}" data-size="1600x1067">
+                        <img src="{{str_replace('w_150', 'w_1500', $item->link)}}" alt="placeholder" class="img-fluid">
                     </a>
                 </figure>
                 @endforeach
@@ -35,8 +35,8 @@
                 @foreach($products->where('category_id', 2) as $product)
                 @foreach($product->items as $item)
                 <figure class="col-md-4">
-                    <a href="{{$item->link}}" data-size="1600x1067">
-                        <img src="{{$item->link}}" alt="placeholder" class="img-fluid">
+                    <a href="{{str_replace('w_150', 'w_1500', $item->link)}}" data-size="1600x1067">
+                        <img src="{{str_replace('w_150', 'w_1500', $item->link)}}" alt="placeholder" class="img-fluid">
                     </a>
                 </figure>
                 @endforeach
@@ -59,8 +59,8 @@
                 @foreach($products->where('category_id', 3) as $product)
                 @foreach($product->items as $item)
                 <figure class="col-md-4">
-                    <a href="{{$item->link}}" data-size="1600x1067">
-                        <img src="{{$item->link}}" alt="placeholder" class="img-fluid">
+                    <a href="{{str_replace('w_150', 'w_1500', $item->link)}}" data-size="1600x1067">
+                        <img src="{{str_replace('w_150', 'w_1500', $item->link)}}" alt="placeholder" class="img-fluid">
                     </a>
                 </figure>
                 @endforeach
@@ -94,6 +94,8 @@
                                         <p class="mt-2">Kết nối với chung tôi trên facebook</p> </li>
                                     <li class="mt-4"><a href="https://www.instagram.com/98media_vietnam/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                                         <p class="mt-2">Kết nối với chúng tôi trên intagram</p> </li>
+                                    <li class="mt-4"><a href="https://www.youtube.com/channel/UCIdYAQShWmQwkLUfT6MarZQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                                        <p class="mt-2">Channel 98 MEDIA VIET NAM</p> </li>
                                     <li class="mt-4"><a href="https://goo.gl/maps/qdnX1XrPRa52" target="_blank"> <i class="fa fa-map-marker indigo-text fa-2x"></i></a>
                                         <p class="mt-2">98MEDIA CENTER , 98 My Dinh Street , Nam Tu Liem Ditric , Ha
                                             Noi City</p>

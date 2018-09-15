@@ -31,7 +31,7 @@
                     <label for="category_id">Danh mục</label>
                     <select id="category_id" name="category_id" class="form-control w-25"
                             style="display: block!important;">
-                            <option value="0">Chọn danh mục sản phẩm</option>
+                        <option value="0">Chọn danh mục sản phẩm</option>
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
@@ -44,6 +44,7 @@
                         <label class="text-danger">*{{$errors->first('description')}}</label>
                     @endif
                 </div>
+
                 <div class="form-group">
                     <label>Đăng video</label>
                     <div class="row ml-1">
@@ -53,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div>
                     <input type="submit" value="Lưu thông tin" class="btn btn-primary btn_save">
                     <input type="reset" value="Làm lại" class="btn btn-dark">

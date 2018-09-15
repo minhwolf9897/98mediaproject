@@ -6,7 +6,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav ml-auto" style="font-family: 'Roboto', sans-serif">
-                    <li class="nav-item"><a class="nav-link active" href="#about">Về Chúng Tôi</a></li>
                     <li class="nav-item"><a class="nav-link" href="/photo">Chụp ảnh</a></li>
                     <li class="nav-item"><a class="nav-link" href="/video">Quay Video</a></li>
                     <li class="nav-item"><a class="nav-link" href="/design">Design</a></li>
@@ -18,13 +17,13 @@
     <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1850/42758155770_fc6ee0c8fc_k.jpg" width="900" height="700" alt="First slide">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1850/42758155770_fc6ee0c8fc_k.jpg" width="800" height="700" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://c1.staticflickr.com/1/820/26454272057_000f804dbc_k.jpg"  width="900" height="700" alt="Second slide">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/1/820/26454272057_000f804dbc_k.jpg"  width="800" height="700" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1849/42758126910_7e07e733aa_k.jpg"  width="900" height="700" alt="Third slide">
+                <img class="d-block w-100" src="https://c1.staticflickr.com/2/1897/43768813285_dc2f346740_k.jpg"  width="800" height="700" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
